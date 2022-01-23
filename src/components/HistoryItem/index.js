@@ -11,15 +11,18 @@ const HistoryItem = props => {
   return (
     <li>
       <div className="history-item">
-        <p>
-          {timeAccessed}
-          <span>{domainUrl}</span>
-        </p>
+        <p>{timeAccessed}</p>
         <div className="image-and-url">
           <img className="domain-logo" src={logoUrl} alt="domain logo" />
           <p>{title}</p>
+          <p>{domainUrl}</p>
         </div>
-        <button className="delete-button" type="button" onClick={onDelete}>
+        <button
+          testid="delete"
+          className="delete-button"
+          type="button"
+          onClick={onDelete}
+        >
           <img
             alt="delete"
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"

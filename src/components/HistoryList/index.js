@@ -9,6 +9,9 @@ class HistoryList extends Component {
     this.setState({searchInput: event.target.value})
   }
 
+  // how can i access props here , so that i can set it to state and modify it when the
+  // deleteHistoryItem is called
+
   deleteHistoryItem = id => {
     const {historyItems} = this.state
     const filteredHistoryItems = historyItems.filter(item => item.id !== id)
